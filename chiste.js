@@ -13,8 +13,26 @@ function cargarChiste() {
         .then(res => document.querySelector('#chiste').innerHTML = res.joke);
 }
 
+function cargarChuckNorris() {
 
-// VERSIÓN CON ARROW FUNCTION?
+    fetch('https://api.chucknorris.io/jokes/random')
+        .then(res => res.json())
+        .then(res => document.querySelector('#chiste').innerHTML = res.value);
+}
+
+function otroChiste() {
+    const random = Math.random();
+    console.log(random);
+
+    if (random < 0.5) {
+        cargarChiste()
+    } else {
+        cargarChuckNorris()
+    }
+}
+
+
+// VERSIÓN CON ARROW FUNCTION
 
 // const cargarChiste = () => {
 
@@ -29,7 +47,7 @@ function cargarChiste() {
 //         .then(res => console.log(res.joke));
 // }
 
-// Fetch: para recuperar info de fuente externa de forma asíncrona
+
 
 
 
@@ -47,6 +65,10 @@ function cargarChiste() {
 //     console.log(res.joke);
 // }
 
+
+// Fetch: para recuperar info de fuente externa de forma asíncrona
+
+// https://stackoverflow.com/questions/33946925/how-do-i-get-geolocation-in-openweather-api
 
 
     // Hemos llamado a fetch() con la URL a la que queremos acceder como parámetro.Esta llamada nos devuelve una promesa.

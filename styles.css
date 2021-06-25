@@ -1,0 +1,25 @@
+body, html {
+  height: 100%;
+}
+.bg {
+  /* The image used */
+  background-image: url("bg.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#chiste-contenedor{
+ height: 220px;
+background-color: rgb(255, 147, 147);
+    border-radius: 20px;
+}
+
+#frase-1, #frase-2, #meteo{
+  font-weight: bold;
+}

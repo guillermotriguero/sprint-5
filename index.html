@@ -6,16 +6,85 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sprint 5</title>
+
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <!-- Tiene que ir mi CSS después del de Bootstrap o no se verá nada -->
+    <link href="styles.css" rel="stylesheet">
+
 </head>
 
 <body>
 
-    <button id="cargarChiste" onClick='cargarChiste()'>¡Alégrame el día!</button>
+    <!-- Background image -->
+    <div class="bg">
+        <!-- Background image -->
+        <div class="container">
+            <div id="meteo" background></div>
 
-    <div id="chiste"></div>
+            <br>
+            <div id="chiste-contenedor">
 
-    <script src="scripts.js">
+                <div class="container">
+
+                    <class class="row">
+                        <div class="col text-center" id="frase-1">
+                            ¿Tienes ganas de reír? <img src="risa.png"> Aquí va un chiste:
+                        </div>
+
+                    </class>
+                    <div class="row">
+                        <div class="col text-center">
+
+                            <div id="chiste"></div>
+                            <br>
+                            <br>
+                            <br>
+                            <div class="col text-center" id="frase-2">
+                                ¿Quieres más? ¡Clica en el botón!
+                            </div>
+                            <button id="cargarChiste" onClick='otroChiste()'>¡Alégrame el día!</button>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+                <br>
+
+
+            </div>
+        </div>
+
+
+    </div>
+    <!-- Esto es para verificar que funciona el geolocalizador:-->
+
+    <!-- <button id="meteo" onClick='getIP()'>¿Dónde estoy?</button>
+
+    <button id="meteo" onClick='meteo()'>¿Qué tiempo hace?</button> -->
+
+    <script src="meteo.js"></script>
+    <script src="chiste.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", meteo);
+        document.addEventListener("DOMContentLoaded", cargarChiste);
     </script>
+
+    <!-- SCRIPTS BOOTSTRAP VERSIÓN CDN-->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
 
 </body>
 
