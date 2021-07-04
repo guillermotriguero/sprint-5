@@ -7,8 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sprint 5</title>
 
-
-
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -24,7 +22,7 @@
     <div class="bg">
         <!-- Background image -->
         <div class="container">
-            <div id="meteo" background></div>
+            <div id="meteo"></div>
 
             <br>
             <div id="chiste-contenedor">
@@ -61,16 +59,16 @@
 
 
     </div>
-    <!-- Esto es para verificar que funciona el geolocalizador:-->
+    <!-- Esto es para verificar que funciona el geolocalizador: -->
 
-    <!-- <button id="meteo" onClick='getIP()'>¿Dónde estoy?</button>
+    <!-- <button id="meteo" onClick='geoLoc()'>¿Dónde estoy?</button>
 
     <button id="meteo" onClick='meteo()'>¿Qué tiempo hace?</button> -->
 
     <script src="meteo.js"></script>
     <script src="chiste.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", meteo);
+        document.addEventListener("DOMContentLoaded", geoLoc);
         document.addEventListener("DOMContentLoaded", cargarChiste);
     </script>
 
